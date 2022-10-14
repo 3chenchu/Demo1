@@ -1,0 +1,28 @@
+Frames:
+
+1. Switch into frame by Frame Name
+
+	driver.switchTo().frame("Google_ContactForm");
+	findElement(By.name("firstname")).sendKeys("Selenium");
+	findElement(By.name("lastname")).sendKeys("Sudhakar");
+	findElement(By.name("subject1")).sendKeys("Selenium Sudhakar");
+	driver.switchTo().defaultContent();
+
+2. Switch into frame by Frame By index
+
+List<WebElement> frames = driver.findElements(By.tagName("iframe"));
+
+driver.switchTo().frame(frames.get(0));
+...
+...
+driver.switchTo().defaultContent();
+
+driver.switchTo().frame(frames.get(1));
+...
+...
+driver.switchTo().defaultContent();
+
+
+3. Switch into frame by WebElement Reference
+
+driver.switchTo().frame(findElement(By.id("GoogleContactForm")));

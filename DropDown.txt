@@ -1,0 +1,24 @@
+DropDown:
+
+Inorder to handle a DropDown we need to import Select Class and we have to create an object for Select class. 
+
+DropDown can be handled in three ways (SelectByValue, SelectByIndex, SelectByVisibleText)
+
+--------------------------------------------------------------------------------------------
+1) SelectByValue:
+
+Select dropdown = new Select(findElement(By.xpath("//select[@name='quantity']")));
+dropdown.selectByValue("3");
+
+---------------------------------------------------------------------------------------------
+2) SelectByIndex:
+
+Select dropdown = new Select(findElement(By.xpath("//select[@name='quantity']")));
+dropdown.selectByIndex(3);
+
+----------------------------------------------------------------------------------------------
+3) SelectByVisibleText:
+
+Select dropdown = new Select(findElement(By.xpath("//select[@name='quantity']")));
+dropdown.selectByVisibleText("3");
+

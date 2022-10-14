@@ -1,0 +1,15 @@
+TakeScreenshot:
+
+We have to import Below mentioned supporting libraries
+
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+------------------------------------------------------------------------------------------
+
+
+TakesScreenshot scrShot1 =((TakesScreenshot)driver); // Capturing the screenshot
+File SrcFile1=scrShot1.getScreenshotAs(OutputType.FILE);//Converting into file format
+FileUtils.copyFile(SrcFile1, new File("C:\\TC02_Login\\TC1_ScreenShot1.jpg")); // copying the file in a path
